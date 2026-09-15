@@ -248,9 +248,15 @@ h1, h2, h3, p { margin: 0; }
 .hero-event {
   font-size: 14px;
   color: rgba(255,255,255,0.75);
-  max-width: 420px;
+  max-width: 460px;
 }
 .hero-event strong { color: var(--gold-light); }
+.hero-event a {
+  color: var(--gold-light);
+  font-weight: 700;
+  text-decoration: none;
+}
+.hero-event a:hover { text-decoration: underline; }
 
 @media (max-width: 640px) {
   .hero-deadline { text-align: left; }
@@ -559,6 +565,15 @@ h1, h2, h3, p { margin: 0; }
   color: var(--ink-soft);
 }
 .date-card-primary .date-card-sub { color: rgba(255,255,255,0.7); }
+.date-card-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--sunset-orange);
+  text-decoration: none;
+}
+.date-card-link:hover { text-decoration: underline; }
 
 .criteria-box {
   background: var(--white);
