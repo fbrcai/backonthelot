@@ -210,15 +210,27 @@ h1, h2, h3, p { margin: 0; }
   color: rgba(255,255,255,0.88);
 }
 
-.hero-deadline {
-  background: var(--gold);
-  color: var(--ink);
-  border-radius: var(--radius);
-  padding: 16px 26px;
-  text-align: right;
+.hero-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   flex-shrink: 0;
 }
-.hero-deadline-label {
+.hero-chip {
+  border-radius: var(--radius);
+  padding: 14px 24px;
+  text-align: right;
+  min-width: 240px;
+}
+.hero-chip-primary {
+  background: var(--gold);
+  color: var(--ink);
+}
+.hero-chip-secondary {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.22);
+}
+.hero-chip-label {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -226,18 +238,30 @@ h1, h2, h3, p { margin: 0; }
   opacity: 0.75;
   margin-bottom: 4px;
 }
-.hero-deadline-date {
+.hero-chip-secondary .hero-chip-label { color: var(--gold); opacity: 1; }
+.hero-chip-value {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 20px;
+  font-size: 19px;
 }
+.hero-chip-secondary .hero-chip-value { color: var(--white); }
+.hero-chip-sub {
+  font-size: 12px;
+  margin-top: 2px;
+  opacity: 0.8;
+}
+.hero-chip-secondary .hero-chip-sub { color: rgba(255,255,255,0.7); opacity: 1; }
+.hero-chip-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold-light);
+  text-decoration: none;
+}
+.hero-chip-link:hover { text-decoration: underline; }
 
 .hero-actions-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
   padding-top: 24px;
 }
 .hero-actions {
@@ -245,22 +269,15 @@ h1, h2, h3, p { margin: 0; }
   gap: 14px;
   flex-wrap: wrap;
 }
-.hero-event {
-  font-size: 14px;
-  color: rgba(255,255,255,0.75);
-  max-width: 460px;
-}
-.hero-event strong { color: var(--gold-light); }
-.hero-event a {
-  color: var(--gold-light);
-  font-weight: 700;
-  text-decoration: none;
-}
-.hero-event a:hover { text-decoration: underline; }
 
 @media (max-width: 640px) {
-  .hero-deadline { text-align: left; }
   .hero-band-inner { align-items: flex-start; }
+  .hero-chips { width: 100%; }
+  .hero-chip {
+    text-align: left;
+    width: 100%;
+    min-width: 0;
+  }
 }
 
 /* ---------- Sections ---------- */
