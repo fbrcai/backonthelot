@@ -312,6 +312,14 @@ h1, h2, h3, p { margin: 0; }
   margin-bottom: 48px;
 }
 .section-lead-light { color: rgba(255,255,255,0.78); }
+.section-lead a {
+  color: var(--sunset-orange);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.section-lead a:hover { color: var(--navy-deep); }
+.section-lead-light a { color: var(--gold); }
+.section-lead-light a:hover { color: var(--gold-light); }
 
 /* ---------- Overview value grid ---------- */
 .value-grid {
