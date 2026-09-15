@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/animation-edition",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/animation-edition/",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
