@@ -641,6 +641,15 @@ h1, h2, h3, p { margin: 0; }
 }
 
 /* ---------- Submit / form ---------- */
+.rights-box {
+  max-width: 760px;
+  margin-bottom: 32px;
+}
+@media (max-width: 640px) {
+  .criteria-box { padding: 24px 20px; }
+  .criteria-box li { padding-left: 22px; }
+}
+.criteria-box li strong { color: var(--navy-deep); }
 .btn-submit-cta {
   font-size: 18px;
   padding: 18px 40px;
